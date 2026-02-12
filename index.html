@@ -805,11 +805,11 @@
                 <h3>Start the conversation</h3>
                 <p>Tell us about your business and the challenges you're facing. We'd love to hear from you.</p>
 
-                <a href="/cdn-cgi/l/email-protection#b4d0d5c2ddd0f4ddc7d8d5dad0d5d8d3dbc6ddc0dcd9c79ad7db9ac1df" class="email-button">
+                <a href="#" id="emailButton" class="email-button" onclick="sendEmail()">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <span class="__cf_email__" data-cfemail="335752455a57735a405f525d57525f545c415a475b5e401d505c1d4658">[email&#160;protected]</span>
+                    <span id="emailText"></span>
                 </a>
 
                 <div class="response-note">
@@ -847,7 +847,7 @@
     </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         navbar.classList.toggle('scrolled', window.scrollY > 40);
@@ -856,4 +856,27 @@
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
 
-    mobileToggle.addEventListener('c
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // Build email dynamically to bypass Cloudflare obfuscation
+    const emailUser = 'david';
+    const emailDomain = 'islandalgorithms.co.uk';
+    const fullEmail = emailUser + '@' + emailDomain;
+    
+    document.getElementById('emailText').textContent = fullEmail;
+    
+    function sendEmail() {
+        window.location.href = 'mail' + 'to:' + fullEmail;
+    }
+</script>
+
+</body>
+</html>
