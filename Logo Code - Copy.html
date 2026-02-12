@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Island Algorithms - Logo (Option 7)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f5f5f5;
+            font-family: system-ui, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .logo-showcase {
+            display: grid;
+            gap: 30px;
+        }
+
+        .logo-item {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Dark Background Variations */
+        .dark-bg {
+            background: #0b1120;
+        }
+
+        .light-bg {
+            background: white;
+        }
+
+        /* Logo Styles */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Logo Bars - Dark Background */
+        .logo-bars-dark {
+            display: flex;
+            gap: 4px;
+            height: 40px;
+            align-items: flex-end;
+        }
+
+        .bar-dark {
+            width: 8px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .bar-dark:nth-child(1) { height: 60%; background: #eef0f6; }
+        .bar-dark:nth-child(2) { height: 100%; background: #c9a84c; }
+        .bar-dark:nth-child(3) { height: 40%; background: #eef0f6; }
+        .bar-dark:nth-child(4) { height: 80%; background: #debb5c; }
+
+        /* Logo Bars - Light Background */
+        .logo-bars-light {
+            display: flex;
+            gap: 4px;
+            height: 40px;
+            align-items: flex-end;
+        }
+
+        .bar-light {
+            width: 8px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .bar-light:nth-child(1) { height: 60%; background: #0b1120; }
+        .bar-light:nth-child(2) { height: 100%; background: #c9a84c; }
+        .bar-light:nth-child(3) { height: 40%; background: #0b1120; }
+        .bar-light:nth-child(4) { height: 80%; background: #debb5c; }
+
+        /* Logo Text */
+        .logo-text-dark {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #eef0f6;
+        }
+
+        .logo-text-dark .highlight {
+            color: #debb5c;
+        }
+
+        .logo-text-light {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #0b1120;
+        }
+
+        .logo-text-light .highlight {
+            color: #c9a84c;
+        }
+
+        /* Large Size */
+        .logo-large .logo-bars-dark,
+        .logo-large .logo-bars-light {
+            height: 60px;
+            gap: 6px;
+        }
+
+        .logo-large .bar-dark,
+        .logo-large .bar-light {
+            width: 12px;
+        }
+
+        .logo-large .logo-text-dark,
+        .logo-large .logo-text-light {
+            font-size: 48px;
+        }
+
+        /* Small Size */
+        .logo-small .logo-bars-dark,
+        .logo-small .logo-bars-light {
+            height: 28px;
+            gap: 3px;
+        }
+
+        .logo-small .bar-dark,
+        .logo-small .bar-light {
+            width: 6px;
+        }
+
+        .logo-small .logo-text-dark,
+        .logo-small .logo-text-light {
+            font-size: 20px;
+        }
+
+        /* Just Icon Versions */
+        .logo-icon-only {
+            display: inline-block;
+        }
+
+        .instructions {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            color: #1565c0;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .instructions strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .instructions code {
+            background: rgba(0,0,0,0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Island Algorithms Logo</h1>
+    <p class="subtitle">Option 7: Modern Data Bars - All Variations</p>
+
+    <div class="logo-showcase">
+        
+        <!-- Version 1: Large - Dark Background -->
+        <div class="logo-item dark-bg">
+            <div class="logo-label" style="color: #8e99b3;">Large - Dark Background (Website Header)</div>
+            <div class="logo logo-large">
+                <div class="logo-bars-dark">
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                </div>
+                <span class="logo-text-dark">Island <span class="highlight">Algorithms</span></span>
+            </div>
+        </div>
+
+        <!-- Version 2: Regular - Dark Background -->
+        <div class="logo-item dark-bg">
+            <div class="logo-label" style="color: #8e99b3;">Regular - Dark Background</div>
+            <div class="logo">
+                <div class="logo-bars-dark">
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                </div>
+                <span class="logo-text-dark">Island <span class="highlight">Algorithms</span></span>
+            </div>
+        </div>
+
+        <!-- Version 3: Small - Dark Background -->
+        <div class="logo-item dark-bg">
+            <div class="logo-label" style="color: #8e99b3;">Small - Dark Background (Mobile/Scrolled)</div>
+            <div class="logo logo-small">
+                <div class="logo-bars-dark">
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                    <div class="bar-dark"></div>
+                </div>
+                <span class="logo-text-dark">Island <span class="highlight">Algorithms</span></span>
+            </div>
+        </div>
+
+        <!-- Version 4: Large - Light Background -->
+        <div class="logo-item light-bg">
+            <div class="logo-label">Large - Light Background</div>
+            <div class="logo logo-large">
+                <div class="logo-bars-light">
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                </div>
+                <span class="logo-text-light">Island <span class="highlight">Algorithms</span></span>
+            </div>
+        </div>
+
+        <!-- Version 5: Regular - Light Background -->
+        <div class="logo-item light-bg">
+            <div class="logo-label">Regular - Light Background</div>
+            <div class="logo">
+                <div class="logo-bars-light">
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                </div>
+                <span class="logo-text-light">Island <span class="highlight">Algorithms</span></span>
+            </div>
+        </div>
+
+        <!-- Version 6: Small - Light Background -->
+        <div class="logo-item light-bg">
+            <div class="logo-label">Small - Light Background</div>
+            <div class="logo logo-small">
+                <div class="logo-bars-light">
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                    <div class="bar-light"></div>
+                </div>
+                <span class="logo-text-light">Island <span class="highlight">Algorithms</span></span>
+            </div>
+        </div>
+
+        <!-- Version 7: Icon Only - Dark -->
+        <div class="logo-item dark-bg">
+            <div class="logo-label" style="color: #8e99b3;">Icon Only - Dark Background (Favicon/Social)</div>
+            <div class="logo-icon-only">
+                <div class="logo-bars-dark" style="height: 80px; gap: 8px;">
+                    <div class="bar-dark" style="width: 16px;"></div>
+                    <div class="bar-dark" style="width: 16px;"></div>
+                    <div class="bar-dark" style="width: 16px;"></div>
+                    <div class="bar-dark" style="width: 16px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Version 8: Icon Only - Light -->
+        <div class="logo-item light-bg">
+            <div class="logo-label">Icon Only - Light Background (Favicon/Social)</div>
+            <div class="logo-icon-only">
+                <div class="logo-bars-light" style="height: 80px; gap: 8px;">
+                    <div class="bar-light" style="width: 16px;"></div>
+                    <div class="bar-light" style="width: 16px;"></div>
+                    <div class="bar-light" style="width: 16px;"></div>
+                    <div class="bar-light" style="width: 16px;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="instructions">
+        <strong>📸 How to Export Your Logo:</strong>
+        
+        <p><strong>Method 1: Screenshot (Quick & Easy)</strong></p>
+        <ol>
+            <li>Right-click on the logo variation you want</li>
+            <li>Select "Inspect" or "Inspect Element"</li>
+            <li>Right-click on the highlighted element in DevTools</li>
+            <li>Click "Capture node screenshot"</li>
+            <li>The image will download automatically</li>
+        </ol>
+
+        <p><strong>Method 2: Design Software (Professional)</strong></p>
+        <ol>
+            <li>Use the color codes below in your design software (Figma, Adobe Illustrator, Canva, etc.)</li>
+            <li>Create the bars with these specifications:
+                <ul>
+                    <li>Bar 1: 60% height, Navy (#eef0f6 on dark / #0b1120 on light)</li>
+                    <li>Bar 2: 100% height, Gold (#c9a84c)</li>
+                    <li>Bar 3: 40% height, Navy (#eef0f6 on dark / #0b1120 on light)</li>
+                    <li>Bar 4: 80% height, Gold Bright (#debb5c)</li>
+                </ul>
+            </li>
+            <li>Add text using <code>Playfair Display Bold</code> font</li>
+        </ol>
+
+        <p><strong>Color Codes:</strong></p>
+        <ul>
+            <li><strong>Navy Dark:</strong> #0b1120</li>
+            <li><strong>Navy Light (on dark):</strong> #eef0f6</li>
+            <li><strong>Gold:</strong> #c9a84c</li>
+            <li><strong>Gold Bright:</strong> #debb5c</li>
+        </ul>
+
+        <p><strong>Font:</strong> Playfair Display Bold (700) - Download free from <a href="https://fonts.google.com/specimen/Playfair+Display" target="_blank">Google Fonts</a></p>
+    </div>
+
+</div>
+
+</body>
+</html>
