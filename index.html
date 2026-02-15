@@ -219,7 +219,7 @@
         .hero-sub {
             font-size: clamp(1.05rem, 2vw, 1.25rem);
             color: var(--text-dim);
-            max-width: 560px;
+            max-width: 580px;
             margin-bottom: 2.5rem;
         }
 
@@ -335,6 +335,44 @@
         }
 
         .service-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        .service-price {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--navy-border);
+            font-size: 0.9rem;
+            color: var(--gold);
+        }
+
+        /* Examples Section */
+        #examples {
+            background: var(--navy-darkest);
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .example-card {
+            background: var(--navy-dark);
+            border: 1px solid var(--navy-border);
+            border-radius: 12px;
+            padding: 1.75rem;
+        }
+
+        .example-card h4 {
+            color: var(--text-bright);
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .example-card p {
             color: var(--text-dim);
             font-size: 0.95rem;
         }
@@ -690,9 +728,9 @@
 
 <section class="hero">
     <div class="hero-content">
-        <div class="hero-badge">Available for new projects</div>
-        <h1>AI solutions that<br>make your business<br><span class="highlight">work smarter</span></h1>
-        <p class="hero-sub">We build custom AI chatbots, automations, and intelligent tools that save your team hours every week — so you can focus on what matters.</p>
+        <div class="hero-badge">Based on the Isle of Wight, working across the UK</div>
+        <h1>AI solutions that<br>help your business<br><span class="highlight">work smarter</span></h1>
+        <p class="hero-sub">Practical AI tools tailored to your business — chatbots that handle enquiries, automations that save hours of admin, and custom solutions built around the way you work.</p>
         <div class="hero-actions">
             <a href="#contact" class="btn-primary">Book a Free Consultation →</a>
             <a href="#services" class="btn-secondary">See What We Build</a>
@@ -702,40 +740,81 @@
 
 <section id="services">
     <div class="section-inner">
-        <div class="section-label">What We Do</div>
-        <h2 class="section-title">Built for your business,<br>powered by AI</h2>
-        <p class="section-desc">Every solution is tailored to your specific needs. No generic templates, no one-size-fits-all. Just intelligent tools that solve real problems.</p>
+        <div class="section-label">What We Build</div>
+        <h2 class="section-title">Solutions tailored to<br>your business</h2>
+        <p class="section-desc">Every project is built specifically for you. We take the time to understand how your business works and create tools that genuinely make a difference.</p>
 
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">💬</div>
                 <h3>AI Chatbots</h3>
-                <p>Custom chatbots trained on your business data. Answer customer questions 24/7, capture leads, and reduce support workload.</p>
+                <p>A smart assistant on your website that answers customer questions around the clock. Trained on your business, your services, and your way of doing things. Captures leads and handles enquiries while you focus on other things.</p>
+                <div class="service-price">From £100</div>
             </div>
             <div class="service-card">
                 <div class="service-icon">⚡</div>
                 <h3>Workflow Automation</h3>
-                <p>Eliminate repetitive tasks that drain your team's time. We connect your existing tools and build automated workflows.</p>
+                <p>Connect your tools so they work together seamlessly. New enquiry comes in? Automatically add it to your spreadsheet, send a confirmation email, and get a notification on your phone — all without lifting a finger.</p>
+                <div class="service-price">From £150</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Data Extraction &amp; Monitoring</h3>
+                <p>Need to track prices, find opportunities, or monitor competitors? We build tools that gather the data you need automatically and deliver clear reports to your inbox daily or weekly.</p>
+                <div class="service-price">From £300</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧮</div>
+                <h3>Quote Calculators &amp; Smart Forms</h3>
+                <p>Interactive tools for your website that let customers get instant quotes, book appointments, or configure options — with everything feeding directly into your systems.</p>
+                <div class="service-price">From £150</div>
             </div>
             <div class="service-card">
                 <div class="service-icon">📊</div>
-                <h3>Data & Analytics Tools</h3>
-                <p>Turn raw data into actionable insights. AI-powered dashboards and reports that help you make better decisions faster.</p>
+                <h3>Dashboards &amp; Reports</h3>
+                <p>Transform your spreadsheets and data into clear, visual dashboards. See what's working, spot trends, and make better decisions — without wading through endless rows and columns.</p>
+                <div class="service-price">From £200</div>
             </div>
             <div class="service-card">
                 <div class="service-icon">🛠️</div>
                 <h3>Custom AI Tools</h3>
-                <p>Bespoke AI applications designed around your unique business challenge — if you can describe it, we can build it.</p>
+                <p>Have a specific challenge? Whether it's a deal finder, document analyser, content generator, or something unique to your industry — if you can describe what you need, we can build it.</p>
+                <div class="service-price">From £300</div>
             </div>
-            <div class="service-card">
-                <div class="service-icon">✍️</div>
-                <h3>Content Generation</h3>
-                <p>AI-powered content systems that produce blog posts, social media, email campaigns — all in your brand voice, at scale.</p>
+        </div>
+    </div>
+</section>
+
+<section id="examples">
+    <div class="section-inner">
+        <div class="section-label">Examples</div>
+        <h2 class="section-title">The kind of problems<br>we solve</h2>
+        <p class="section-desc">Every business is different. Here are some examples of the solutions we build — but if your challenge isn't listed here, get in touch anyway. We're always happy to explore what's possible.</p>
+        
+        <div class="examples-grid">
+            <div class="example-card">
+                <h4>💬 "We answer the same questions over and over"</h4>
+                <p>An AI chatbot trained on your FAQs handles the repetitive enquiries, freeing up your time for the conversations that matter.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">🔗</div>
-                <h3>AI Integration</h3>
-                <p>Integrate AI capabilities into your existing tools — CRM, email, accounting, or project management platforms.</p>
+            <div class="example-card">
+                <h4>📋 "I spend hours on admin that should be automated"</h4>
+                <p>Workflow automation connects your tools — forms, emails, spreadsheets, calendars — so data flows automatically without manual copying.</p>
+            </div>
+            <div class="example-card">
+                <h4>🔎 "I need to monitor prices/listings/opportunities"</h4>
+                <p>A custom monitoring tool checks the sources you need and delivers a summary of what's changed, new, or worth your attention.</p>
+            </div>
+            <div class="example-card">
+                <h4>💷 "Customers want instant quotes but our pricing is complex"</h4>
+                <p>An interactive calculator on your website lets customers configure options and see prices instantly — and sends you the details.</p>
+            </div>
+            <div class="example-card">
+                <h4>📊 "I have data everywhere but no clear picture"</h4>
+                <p>A dashboard pulls together your key numbers into one clear view, updated automatically so you always know where you stand.</p>
+            </div>
+            <div class="example-card">
+                <h4>🤔 "I have an idea but I'm not sure if it's possible"</h4>
+                <p>Let's talk. Many things that seem complicated are actually very achievable — and we'll be honest if something isn't the right fit.</p>
             </div>
         </div>
     </div>
@@ -744,25 +823,25 @@
 <section id="process">
     <div class="section-inner">
         <div class="section-label">How It Works</div>
-        <h2 class="section-title">From idea to impact<br>in four steps</h2>
-        <p class="section-desc">No jargon, no confusion. We keep things simple and transparent from start to finish.</p>
+        <h2 class="section-title">Simple, transparent,<br>and straightforward</h2>
+        <p class="section-desc">No complicated contracts or endless meetings. Here's how we work together:</p>
 
         <div class="process-steps">
             <div class="step">
-                <h3>Discovery Call</h3>
-                <p>A free conversation about your business. We'll identify where AI can make the biggest impact.</p>
+                <h3>Free Consultation</h3>
+                <p>Tell me about your business and what's taking up your time. We'll explore where AI can genuinely help — and whether I'm the right person to build it.</p>
             </div>
             <div class="step">
-                <h3>Custom Proposal</h3>
-                <p>You'll receive a clear plan with exactly what we'll build, how long it will take, and what it costs.</p>
+                <h3>Clear Proposal</h3>
+                <p>You'll receive a straightforward quote with a clear scope, timeline, and price. No hidden costs, no surprises. If it's not right for you, no problem.</p>
             </div>
             <div class="step">
-                <h3>Build & Test</h3>
-                <p>We build your solution and test it thoroughly. You'll see progress and give feedback before launch.</p>
+                <h3>Build &amp; Refine</h3>
+                <p>I build your solution and you test it. We refine together until you're completely happy. You'll see progress throughout — not just at the end.</p>
             </div>
             <div class="step">
-                <h3>Launch & Support</h3>
-                <p>We deploy your solution and make sure everything runs smoothly as your business grows.</p>
+                <h3>Launch &amp; Support</h3>
+                <p>We go live and I make sure everything works smoothly. All projects include two weeks of support for any adjustments. Ongoing support packages are available if you need them.</p>
             </div>
         </div>
     </div>
@@ -772,28 +851,28 @@
     <div class="section-inner">
         <div class="about-grid">
             <div class="about-text">
-                <div class="section-label">Why Island Algorithms</div>
-                <h2 class="section-title">Technology expertise<br>with a personal touch</h2>
-                <p>Based on the Isle of Wight, Island Algorithms was founded on a simple belief: every business deserves access to the power of AI.</p>
-                <p>With a background in algorithmic systems and data-driven decision making, we bring deep technical expertise to every project.</p>
-                <p>Whether you're a local business looking to save time or a growing company ready to scale with AI, we'll build exactly what you need.</p>
+                <div class="section-label">About</div>
+                <h2 class="section-title">One person.<br>Direct communication.<br>Real results.</h2>
+                <p>I'm David, and I run Island Algorithms from the Isle of Wight — working with businesses across the UK.</p>
+                <p>My background is in financial services and technology. I've spent years working with data, algorithms, and complex systems. Now I help business owners access the same kind of powerful tools that were once only available to large corporations — at a fraction of the cost.</p>
+                <p>When you work with me, you work with me directly. I keep things simple and provide a service that my clients can trust and rely on.</p>
             </div>
             <div class="about-stats">
                 <div class="stat-block">
                     <div class="stat-number">24/7</div>
-                    <div class="stat-label">Your AI tools work around the clock</div>
+                    <div class="stat-label">Your AI tools never take a day off</div>
                 </div>
                 <div class="stat-block">
-                    <div class="stat-number">10×</div>
-                    <div class="stat-label">Faster than manual processes</div>
+                    <div class="stat-number">Fast</div>
+                    <div class="stat-label">Most projects delivered in days, not months</div>
                 </div>
                 <div class="stat-block">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Custom-built for your business</div>
+                    <div class="stat-number">UK</div>
+                    <div class="stat-label">Based &amp; working nationwide</div>
                 </div>
                 <div class="stat-block">
                     <div class="stat-number">£0</div>
-                    <div class="stat-label">For your initial consultation</div>
+                    <div class="stat-label">For an initial consultation</div>
                 </div>
             </div>
         </div>
@@ -804,12 +883,12 @@
     <div class="section-inner">
         <div class="contact-container">
             <div class="section-label">Get Started</div>
-            <h2 class="section-title">Let's talk about what<br>AI can do for you</h2>
-            <p class="section-desc">Ready to explore how AI can transform your business? Get in touch for a free, no-obligation consultation.</p>
+            <h2 class="section-title">Let's talk about your business</h2>
+            <p class="section-desc">Whether you have a clear project in mind or you're exploring what's possible, I'm happy to chat. The initial consultation is free and there's no obligation.</p>
 
             <div class="contact-card">
-                <h3>Start the conversation</h3>
-                <p>Tell us about your business and the challenges you're facing. We'd love to hear from you.</p>
+                <h3>Get in touch</h3>
+                <p>Tell me a bit about your business and what challenges you're facing. I'll get back to you within a few hours.</p>
 
                 <a href="#" id="emailButton" class="email-button" onclick="sendEmail()">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -819,7 +898,7 @@
                 </a>
 
                 <div class="response-note">
-                    We typically respond within a few hours during business hours.
+                    You can also use the chat in the corner — it's an example of what we build.
                 </div>
             </div>
 
@@ -829,7 +908,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <span>Isle of Wight, United Kingdom</span>
+                    <span>Isle of Wight, UK — working nationwide</span>
                 </div>
                 <div class="contact-detail">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -886,4 +965,3 @@
 <script src="//code.tidio.co/vshqfcqqskxvbbafstw4seirmwxuxgnm.js" async></script>
 </body>
 </html>
-
