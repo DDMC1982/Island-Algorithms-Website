@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Island Algorithms</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-darkest: #0b1120;
+            --navy-dark: #111d35;
+            --navy: #1a2a4a;
+            --gold: #c9a84c;
+            --gold-bright: #debb5c;
+            --gold-dim: rgba(201, 168, 76, 0.15);
+            --text: #d4d9e6;
+            --text-dim: #8e99b3;
+            --text-bright: #eef0f6;
+            --navy-border: #2e4470;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--navy-darkest);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            transition: all 0.4s ease;
+            background: rgba(11, 17, 32, 0.94);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        nav.scrolled {
+            padding: 1rem 2rem;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
+        .logo-bars {
+            display: flex;
+            gap: 4px;
+            height: 40px;
+            align-items: flex-end;
+            transition: all 0.3s ease;
+        }
+
+        .bar {
+            width: 8px;
+            border-radius: 4px 4px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .bar:nth-child(1) { height: 60%; background: var(--text-bright); }
+        .bar:nth-child(2) { height: 100%; background: var(--gold); }
+        .bar:nth-child(3) { height: 40%; background: var(--text-bright); }
+        .bar:nth-child(4) { height: 80%; background: var(--gold-bright); }
+
+        .logo-link:hover .bar:nth-child(1) { height: 70%; }
+        .logo-link:hover .bar:nth-child(2) { height: 100%; }
+        .logo-link:hover .bar:nth-child(3) { height: 50%; }
+        .logo-link:hover .bar:nth-child(4) { height: 90%; }
+
+        nav.scrolled .logo-bars { height: 32px; }
+        nav.scrolled .bar { width: 6px; }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            letter-spacing: -0.02em;
+            transition: all 0.3s ease;
+        }
+
+        .logo-text .highlight {
+            color: var(--gold-bright);
+        }
+
+        nav.scrolled .logo-text { font-size: 1.6rem; }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            letter-spacing: 0.01em;
+        }
+
+        .nav-links a:hover { color: var(--gold-bright); }
+
+        .nav-cta {
+            background: var(--gold) !important;
+            color: var(--navy-darkest) !important;
+            padding: 0.7rem 1.6rem;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            font-size: 1.05rem !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold-bright) !important;
+            transform: translateY(-1px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            margin: 5px 0;
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 10rem 2rem 4rem;
+            text-align: center;
+            background: var(--navy-dark);
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 600;
+            color: var(--text-bright);
+            margin-bottom: 1rem;
+        }
+
+        .page-header .highlight {
+            color: var(--gold-bright);
+        }
+
+        .page-header .last-updated {
+            color: var(--text-dim);
+            font-size: 1rem;
+        }
+
+        /* Content */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-bright);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .content h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .content ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .content li::marker {
+            color: var(--gold);
+        }
+
+        .content a {
+            color: var(--gold-bright);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .content a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--navy-border);
+        }
+
+        .contact-box {
+            background: var(--navy);
+            border: 1px solid var(--navy-border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-box h3 {
+            margin-top: 0;
+            color: var(--text-bright);
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy-darkest);
+            border-top: 1px solid var(--navy-border);
+            padding: 3rem 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-copy {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a:hover { color: var(--gold-bright); }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(11, 17, 32, 0.97);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--navy-border);
+            }
+
+            .nav-links.open { display: flex; }
+            .mobile-toggle { display: block; }
+            .logo-text { font-size: 1.5rem; }
+            nav.scrolled .logo-text { font-size: 1.3rem; }
+            .logo-bars { height: 32px; }
+            nav.scrolled .logo-bars { height: 28px; }
+            .nav-links a { font-size: 1rem; }
+            .page-header { padding: 8rem 1.5rem 3rem; }
+            .content { padding: 3rem 1.5rem; }
+            .content h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="logo-link">
+            <div class="logo-bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <span class="logo-text">Island <span class="highlight">Algorithms</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#process">How It Works</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact" class="nav-cta">Get In Touch</a></li>
+        </ul>
+        <button class="mobile-toggle" id="mobileToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<header class="page-header">
+    <h1>Terms of <span class="highlight">Service</span></h1>
+    <p class="last-updated">Last Updated: February 2026</p>
+</header>
+
+<main class="content">
+    <p class="intro-text">Welcome to Island Algorithms. These Terms of Service ("Terms") govern your use of our website islandalgorithms.co.uk ("Website") and the services we provide, including any custom AI software, tools, or solutions we develop for you. By accessing or using our Website or services, you agree to be bound by these Terms.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By using this Website, you confirm that you:</p>
+    <ul>
+        <li>Have the authority to enter into these Terms</li>
+        <li>Agree to comply with all applicable laws and regulations</li>
+    </ul>
+    <p>If you do not agree to these Terms, please do not use our website or services.</p>
+
+    <h2>2. Services</h2>
+    <p>Island Algorithms provides AI consultancy and development services, including but not limited to:</p>
+    <ul>
+        <li>AI chatbot development</li>
+        <li>Workflow automation</li>
+        <li>Data extraction and monitoring tools</li>
+        <li>Custom AI solutions</li>
+        <li>Data analytics and reporting systems</li>
+        <li>AI-powered software applications and integrations</li>
+    </ul>
+    <p>Specific service terms will be outlined in individual service agreements or proposals.</p>
+
+    <h2>3. Use of Website</h2>
+    
+    <h3>3.1 Permitted Use</h3>
+    <p>You may use our website for lawful purposes only, including:</p>
+    <ul>
+        <li>Learning about our services</li>
+        <li>Contacting us for enquiries</li>
+        <li>Requesting quotes or consultations</li>
+    </ul>
+
+    <h3>3.2 Prohibited Use</h3>
+    <p>You must not:</p>
+    <ul>
+        <li>Use the Website in any way that violates laws or regulations</li>
+        <li>Attempt to gain unauthorised access to our systems or networks</li>
+        <li>Introduce viruses, malware, or other harmful code</li>
+        <li>Use automated systems (bots, scrapers) without permission</li>
+        <li>Engage in any conduct that restricts or inhibits others from using the Website</li>
+        <li>Copy, reproduce, or redistribute Website content without permission</li>
+    </ul>
+
+    <h3>3.3 Use of AI Software and Services</h3>
+    <p>Where we develop custom AI software or tools for you, the following additional terms apply:</p>
+    <ul>
+        <li>You are responsible for the data you input into any AI system we build for you</li>
+        <li>You must not use AI tools we develop for any unlawful, harmful, or discriminatory purposes</li>
+        <li>AI-generated outputs may not always be accurate and should be reviewed before reliance, particularly for critical business decisions</li>
+        <li>You must comply with any usage policies of underlying AI platforms (such as OpenAI or Anthropic) that power the solutions we build</li>
+    </ul>
+    <p>Specific terms relating to the use, maintenance, and support of custom AI solutions will be detailed in individual service agreements.</p>
+
+    <h2>4. Intellectual Property Rights</h2>
+    <p>All content on this website, including text, graphics, logos, code, and design, is the property of Island Algorithms and is protected by UK and international copyright laws.</p>
+    <p>You may not use, copy, modify, or distribute our content without prior written permission, except as necessary to view the Website in your browser.</p>
+    <p>Ownership and licensing of custom AI software, tools, and deliverables created for clients will be defined in the relevant service agreement. Unless otherwise agreed in writing, Island Algorithms retains ownership of all proprietary methodologies, frameworks, templates, and reusable code components used in the development process.</p>
+
+    <h2>5. Third-Party Services and Links</h2>
+    <p>Our website may contain links to third-party websites or services. We are not responsible for the content, privacy practices, or terms of these external sites. Accessing third-party links is at your own risk.</p>
+    <p>Our services may rely on third-party APIs, AI platforms, and cloud infrastructure providers, including but not limited to OpenAI, Anthropic, Cloudflare, and Vercel. Your use of our services that incorporate these platforms is also subject to their respective terms and conditions. We are not liable for any changes, outages, or limitations imposed by third-party providers that may affect the functionality of AI solutions we develop.</p>
+
+    <h2>6. Service Availability and Modifications</h2>
+    <p>We strive to keep our website available, but we do not guarantee uninterrupted access. We reserve the right to:</p>
+    <ul>
+        <li>Modify, suspend, or discontinue the Website or services at any time</li>
+        <li>Perform maintenance without prior notice</li>
+        <li>Update these Terms at any time (changes will be posted with a new "Last Updated" date)</li>
+    </ul>
+
+    <h2>7. Disclaimers and Warranties</h2>
+    <p>This Website and the information provided are offered "as is" without warranties of any kind, either express or implied.</p>
+    <p>We do not warrant that:</p>
+    <ul>
+        <li>The Website will be error-free or uninterrupted</li>
+        <li>Information on the Website is complete, accurate, or current</li>
+        <li>The Website is free from viruses or harmful components</li>
+    </ul>
+    <p>While we provide information about our services on this Website, specific deliverables and warranties will be outlined in individual service agreements.</p>
+    <p>With respect to custom AI software and tools we develop, we do not warrant that:</p>
+    <ul>
+        <li>AI-generated outputs will be accurate, complete, or free from errors</li>
+        <li>AI systems will operate without interruption or be compatible with all third-party platforms indefinitely</li>
+        <li>Third-party AI service providers will not change their terms, pricing, or availability</li>
+    </ul>
+    <p>AI technology is inherently probabilistic and outputs should be verified by the client before use in any critical application. Island Algorithms does not accept liability for decisions made based solely on AI-generated outputs.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Island Algorithms shall not be liable for:</p>
+    <ul>
+        <li>Any indirect, incidental, special, consequential, or punitive damages arising from your use of our Website or services</li>
+        <li>Loss of profits, revenue, data, or business opportunities arising from our services or Website</li>
+        <li>Damages arising from your use of or inability to use the website</li>
+        <li>Damages caused by third-party services, links, or content</li>
+        <li>Losses arising from reliance on AI-generated outputs, decisions made using AI tools, or changes to third-party AI service providers</li>
+    </ul>
+    <p>This limitation applies whether the claim is based on contract, tort, negligence, or any other legal theory.</p>
+
+    <h2>9. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless Island Algorithms, its owner, and affiliates from any claims, damages, losses, or expenses (including legal fees) arising from:</p>
+    <ul>
+        <li>Your use of the Website</li>
+        <li>Your violation of these Terms</li>
+        <li>Your infringement of any third-party rights</li>
+    </ul>
+
+    <h2>10. Privacy</h2>
+    <p>Your use of the Website is also governed by our <a href="privacy-policy.html">Privacy Policy</a>, which explains how we collect, use, and protect your personal information.</p>
+
+    <h2>11. Data Handling and AI Ethics</h2>
+    <p>When we develop custom AI software for clients, we are committed to responsible AI practices:</p>
+    <ul>
+        <li>We process client data only as necessary to deliver the agreed services</li>
+        <li>Client data is not used to train AI models unless explicitly agreed in writing</li>
+        <li>We implement appropriate security measures to protect data processed through AI systems</li>
+        <li>We will inform clients of any material changes to third-party AI providers that may affect their solutions</li>
+    </ul>
+    <p>Data processing responsibilities between Island Algorithms and the client will be detailed in a Data Processing Agreement where applicable, in accordance with UK GDPR requirements.</p>
+
+    <h2>12. Governing Law and Jurisdiction</h2>
+    <p>These Terms are governed by the laws of England and Wales. Any disputes arising from these Terms or your use of the Website shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+    <h2>13. Severability</h2>
+    <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+    <h2>14. Entire Agreement</h2>
+    <p>These Terms, together with our <a href="privacy-policy.html">Privacy Policy</a> and any service agreements, constitute the entire agreement between you and Island Algorithms regarding the use of this Website.</p>
+
+    <h2>15. Contact Us</h2>
+    <p>If you have questions about these Terms, please contact us:</p>
+    <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:david@islandalgorithms.co.uk">david@islandalgorithms.co.uk</a></p>
+        <p><strong>Website:</strong> <a href="https://islandalgorithms.co.uk">islandalgorithms.co.uk</a></p>
+        <p><strong>Business:</strong> Island Algorithms, Isle of Wight, United Kingdom</p>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-copy">© 2025 Island Algorithms. All rights reserved.</div>
+        <ul class="footer-links">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+</script>
+</body>
+</html>
